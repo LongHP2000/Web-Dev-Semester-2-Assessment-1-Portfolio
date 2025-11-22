@@ -1,0 +1,301 @@
+:root {
+    --page-bg: white;
+    --panel-bg: white;
+    --caption-bg: lightcyan;
+    --accent: teal;
+    --max-width: 1200px;
+    --gap: 15px; /* Updated gap to 15px */
+    --text: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--page-bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: black;
+    color: white;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+/* Header with ornament and cart */
+.site-header {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px 12px;
+    text-align: center;
+    background: var(--page-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ornament {
+    width: auto;
+    height: 70%;
+    max-width: 90%;
+    max-height: 70px;
+    display: block;
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+.cart {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.cart:focus {
+    outline: 5px solid black;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+/* Gallery column */
+.gallery {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 12px;
+}
+
+.photo {
+    background: var(--panel-bg);
+    margin: 0 auto var(--gap); /* Use the gap variable */
+    padding: 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.photo figure {
+    margin: 0;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Add button */
+.add {
+    display: inline-block;
+    width: 50%;
+    padding: 5px 5px;
+    border: none;
+    background: lightgrey; /* Changed to lightgrey */
+    color: black;
+    font-size: 0.88rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+/* Add button hover and focus styles */
+.add:hover { 
+    background-color: green;
+    color: white;
+}
+
+.add:focus {
+    outline: 3px solid var(--accent);
+    background: azure;
+}
+
+.photo figcaption {
+    background: var(--caption-bg);
+    color: darkslategray;
+    padding: 12px;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Footer at bottom of page */
+.site-footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0 12px 15px;
+    font-size: 0.9rem;
+    background: var(--page-bg);
+    margin-top: auto;
+}
+
+.site-footer p {
+    margin: 6px 0;
+}
+
+.site-footer nav {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+.site-footer nav ul {
+    margin: 6px 0;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.site-footer nav li {
+    margin: 4px 0;
+}
+
+.site-footer nav a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.site-footer nav a:focus,
+.site-footer nav a:hover {
+    outline: 3px solid var(--accent);
+    background: lightcyan;
+    border-radius: 4px;
+}
+
+
+/* Accessibility helper */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Cart Modal Styles */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.cart-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for cart items list */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+/* Style for checkout button */
+#checkout-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#checkout-button:hover {
+    background-color: darken(var(--accent), 10%);
+}
+
+/* Responsive Layout */
+.photo {
+    width: calc(25% - var(--gap)); /* Four items per row by default with gap */
+    margin: calc(var(--gap) / 2); /* Add margin to create gap */
+}
+
+.gallery {
+    margin: calc(var(--gap) / -2); /* Adjust gallery margin to offset photo margins */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .photo {
+        width: 100%; /* Each item takes full width */
+        margin: 0 auto var(--gap); /* Add gap below each image */
+    }
+
+    .gallery {
+        margin: 0; /* Remove gallery margin */
+    }
+}

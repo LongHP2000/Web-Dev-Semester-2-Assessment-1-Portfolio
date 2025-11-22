@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: lightgray; /* outer grey background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: black; /* main body text color (use word, not hex) */
+}
+
+.wrapping-border-white {
+    background-color: white; /* white wrapping card */
+    max-width: 760px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    margin: 20px 0;
+}
+
+/* Headings: all green */
+h1,
+h2 {
+    color: forestgreen;
+    text-align: center;
+    font-weight: 900;
+    margin: 0 0 20px;
+}
+
+h1 {
+    font-size: 55px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+/* h3 default for normal content headings */
+h3 {
+    color: forestgreen;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0 15px;
+    text-align: left;
+}
+
+/* Body text */
+p {
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Highlight box (Did you know?) */
+.highlight-box {
+    background-color: forestgreen; /* green box background */
+    color: white; /* white text inside box */
+    padding: 12px 20px 20px; /* smaller top gap */
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+/* The heading inside the green box */
+.highlight-box h3 {
+    color: white;
+    margin: 6px 0 10px; /* small gap from top and modest bottom gap */
+    text-align: left;
+    font-size: 28px;
+}
+
+.highlight-box p {
+    color: white;
+    margin-bottom: 0;
+    line-height: 1.5;
+}

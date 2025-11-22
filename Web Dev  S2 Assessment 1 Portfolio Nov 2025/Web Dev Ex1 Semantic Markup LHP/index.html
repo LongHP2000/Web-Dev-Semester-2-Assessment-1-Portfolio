@@ -1,0 +1,112 @@
+<!-- Module: Web Dev. Assessment 1: Set Exercises -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cooking with Andy!</title>
+    <style>
+        /* Start of embedded CSS styles within the html coding */
+        /* Header with flexbox: title on top, nav below aligned left */
+        
+        .site-header {
+            display: flex;
+            flex-direction: column;
+            /* stack title then nav */
+            justify-content: flex-start;
+            align-items: flex-start;
+            /* Align everything to the left hand side */
+            gap: 8px;
+            /* Gap between h1 and nav */
+            background: lightgray;
+            /* color written as word instead of hex */
+            padding: 16px;
+        }
+        
+        .site-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            /* Smaller font size for the header to distinguish it visually */
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: blue;
+            /* Link color.  Not using hover effect or actve colour change get, just keeping coding basic. */
+        }
+        /* Spacing between links */
+        
+        nav a+a {
+            margin-left: 12px;
+            /* Add left margin to all links except the first */
+        }
+        /* End of embedded CSS styles within the html coding */
+    </style>
+</head>
+
+<body>
+    <!-- Top banner (flexbox header) -->
+    <header class="site-header">
+        <h1>Cooking with Andy!</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="browse.html">Browse</a>
+        </nav>
+    </header>
+
+    <!-- Title and sub-heading -->
+    <h2 style="margin:16px;">Chocolate Chip Cookies</h2>
+    <p style="margin:16px; max-width:7px;">
+        Delicious homemade cookies with gooey chocolate chips!
+    </p>
+
+    <!-- Cookie ingredients -->
+    <h3 style="margin:16px;">Ingredients</h3>
+    <ul style="margin:0 16px 16px 48px; max-width:720px;">
+        <li>2 1/4 cups flour</li>
+        <li>1/2 teaspoon baking soda</li>
+        <li>1 cup unsalted butter, softened</li>
+        <li>1/2 cup granulated sugar</li>
+        <li>1 cup packed brown sugar</li>
+        <li>1 teaspoon vanilla extract</li>
+        <li>2 large eggs</li>
+        <li>2 cups semisweet chocolate chips</li>
+    </ul>
+
+    <!-- Responsive banner, note for using alternatives rather than using eggs  (grey box). -->
+    <table width="100%" cellspacing="0" cellpadding="16" backgcolor="lightgray">
+        <tr>
+            <td>
+                <p style="margin:0; max-width: 1200px; background-color:lightgray; padding: 16px;">
+                    If you don't have eggs, you can use a suitable egg substitute like applesauce, mashed bananas, or yogurt. Use 1/4 cup of the substitute for each egg in the recipe.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Instructions for making cookies -->
+    <h3 style="margin:16px;">Instructions</h3>
+    <ol style="margin:0 16px 16px 48px; max-width:960px; line-height:1.4;">
+        <li>Preheat your oven to 190°C.</li>
+        <li>In a small bowl, mix the flour and baking soda. Set aside.</li>
+        <li>In a large mixing bowl, cream together the softened butter, granulated sugar, brown sugar, and vanilla extract until smooth.</li>
+        <li>Add the eggs one at a time, beating well after each addition.</li>
+        <li>Gradually add the flour mixture to the wet ingredients, mixing until well combined.</li>
+        <li>Stir in the chocolate chips.</li>
+        <li>Drop rounded tablespoons of dough onto ungreased baking sheets.</li>
+        <li>Bake in the oven for 8-10 minutes or until the edges are golden brown.</li>
+        <li>Allow the cookies to cool on the baking sheets for a few minutes before transferring them to wire racks to cool completely.</li>
+    </ol>
+
+    <!-- Responsive Footer banner(grey box) -->
+    <table width="100%" cellspacing="0" cellpadding="16">
+        <tr>
+            <td>
+                <p style="margin:0; background-color:lightgray; padding:16px;">Cooking With Andy © 2024</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

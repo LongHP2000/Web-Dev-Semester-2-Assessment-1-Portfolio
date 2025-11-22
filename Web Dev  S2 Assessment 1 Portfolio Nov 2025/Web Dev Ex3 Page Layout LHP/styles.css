@@ -1,0 +1,147 @@
+body {
+    font-family: 'Open Sans' Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: white; /* Background set to white*/
+}
+.container{ /* Contents set to centeral */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1 { 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 16px 0;
+    font-size: 36px;
+}
+
+#header nav { /* Navigation menu bar */
+    text-align: center;
+    margin-top: 8px;
+}
+
+#header nav a {
+    color: blue;
+    margin: 0 18px;    
+    text-decoration: underline;
+    font-size: 18px;
+    display: inline-block;
+}
+
+#header nav a:hover {
+    color: green
+}
+
+
+/* The Container setup */
+.top-content {
+    display: block;
+    overflow: hidden; 
+    max-width: 1200px;
+    background-color: white;
+    margin: 5px auto;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+/* Text wrap around image of yak. */
+.yak-float {
+    float: right;
+    width: 320px;
+    height: 220px; 
+     object-fit: cover;
+     margin-left: 10px; 
+    margin-bottom: 10px;
+}
+
+/* Text configured for display */
+.top-content p {
+    margin: 0 0 0px;
+    line-height: 1.6;
+    text-align: left;
+    color: black; 
+    font-size: 14px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Media query used for responsive smaller screen devices */
+.media-capture {
+ margin:0 auto;
+    padding: 0;
+    height: 320px;
+    align-items: stretch;
+    max-width: 1200px;
+    display: flex;
+    gap: 0;
+}
+
+/* --- VIDEO AND IMAGE STYLES --- */
+.video-containermp4 {
+    flex: 2;
+    min-width: 200px;
+    height: 100%;
+}
+
+.video-containermp4 video {
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- IMAGE STYLES --- */
+.display-image {
+    flex: 1;
+    min-width: 160px;
+    height: 100%;
+}
+
+.display-image img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- GALLERY GRID STYLES  --- */
+.gallery-grid {
+    display: grid;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 320px;
+    gap: 0;
+}
+
+/* Individual grid items */
+.gallery-grid img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* Positioning specific images in the grid */
+.gallery-grid img:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.gallery-grid img:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.gallery-grid img:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.gallery-grid img:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
